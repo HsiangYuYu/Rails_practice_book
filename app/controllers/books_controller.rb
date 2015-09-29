@@ -4,8 +4,8 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
-  end
+    @books = Book.search(params[:keyword])
+  end    
 
   # GET /books/1
   # GET /books/1.json
